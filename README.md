@@ -6,6 +6,8 @@ Using this action will allow you to start a security scan for a GraphQL applicat
 
 We recommend providing these values as [Encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
+<img width="1144" alt="image" src="https://user-images.githubusercontent.com/29194680/190671188-b2ff835d-ab05-4023-a6d5-27e8bff43cdb.png">
+
 ## Setup
 
 This action requires an application ID and an API key to be provided. You can find both of these in the settings tab of your application on escape.
