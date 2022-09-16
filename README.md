@@ -25,8 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Escape Scan
-      uses: Escape-Technologies/action@v0
-      with:
-        application_id: ${{ secrets.ESCAPE_APPLICATION_ID }}
-        api_key: ${{ secrets.ESCAPE_API_KEY }}
+        uses: Escape-Technologies/action@v0
+        with:
+          application_id: ${{ secrets.ESCAPE_APPLICATION_ID }}
+          api_key: ${{ secrets.ESCAPE_API_KEY }}
 ```
