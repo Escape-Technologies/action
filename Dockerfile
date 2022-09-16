@@ -5,6 +5,4 @@ WORKDIR /app
 RUN npm install -g @escape.tech/action
 RUN npm show @escape.tech/action version
 
-CMD ['/bin/sh echo "Hello World"']
-
-# CMD ["escape-action"]
+ENTRYPOINT [ "escape-action" ]
