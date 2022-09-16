@@ -18,7 +18,7 @@ jobs:
       - name: Auto merge v0
         run: |
           git fetch --unshallow
-          git checkout dev
+          git checkout main
           git pull
           git merge --no-ff v0 -m "Auto-merge v0"
           git push
