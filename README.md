@@ -1,6 +1,6 @@
 # Escape.tech / Action
 
-Run [escape](https://escape.tech) directly in Github actions !
+Run [Escape](https://escape.tech) directly in Github actions !
 
 Using this action will allow you to start a security scan for a GraphQL application on the [Escape platform](https://app.escape.tech).
 
