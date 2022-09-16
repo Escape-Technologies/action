@@ -12,7 +12,7 @@ This action requires an application ID and an API key to be provided. You can fi
 
 You can find theses values in your Escape application settings.
 
-<img width="1106" alt="image" src="https://user-images.githubusercontent.com/29194680/190669534-792f5af5-3ac6-4c6e-9c67-46984bc41dd7.png">
+<img width="1290" alt="image" src="https://user-images.githubusercontent.com/29194680/190670679-9f0c4557-ec62-44df-8e63-2cdd29ddbb1b.png">
 
 ### Required arguments
 
