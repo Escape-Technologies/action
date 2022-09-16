@@ -6,7 +6,6 @@ Using this action will allow you to start a security scan for a GraphQL applicat
 
 We recommend providing these values as [Encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
-
 ## Setup
 
 This action requires an application ID and an API key to be provided. You can find both of these in the settings tab of your application on escape.
@@ -40,4 +39,5 @@ jobs:
         with:
           application_id: ${{ secrets.ESCAPE_APPLICATION_ID }}
           api_key: ${{ secrets.ESCAPE_API_KEY }}
+          # timeout: 1200 (default - in seconds)
 ```
