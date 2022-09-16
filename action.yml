@@ -1,0 +1,27 @@
+--
+name: 'Escape.tech - Action'
+
+description: 'Secure your application using Escape.tech'
+
+inputs:
+  application_id:
+    description: 'The id of your application'
+    required: true
+  api_key:
+    description: 'Your escape api key'
+    required: true
+  timeout:
+    description: 'Maximum blocking time for a CI/CD run'
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.application_id }}
+    - ${{ inputs.api_key }}
+    - ${{ inputs.timeout }}
+
+branding:
+  icon: 'check'  
+  color: 'white'
