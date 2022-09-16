@@ -27,6 +27,6 @@ jobs:
       - name: Escape Scan
       uses: Escape-Technologies/action@v0
       with:
-        ESCAPE_APPLICATION_ID: ${{ secrets.ESCAPE_APPLICATION_ID }}
-        ESCAPE_API_KEY: ${{ secrets.ESCAPE_API_KEY }}
+        application_id: ${{ secrets.ESCAPE_APPLICATION_ID }}
+        api_key: ${{ secrets.ESCAPE_API_KEY }}
 ```
