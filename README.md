@@ -4,10 +4,14 @@
 
 You need two environment variable to setup continous scan integration:
 
-- `APPLICATION_ID`: 
-- `API_KEY`: 
+- `APPLICATION_ID`: Your Escape application ID
+- `API_KEY`: Your Escape API key
 
-- `TIMEOUT`: (optional)
+You can find theses values in your Escape application settings.
+
+### Optional
+
+- `TIMEOUT`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds.
 
 ## Usage
 
@@ -21,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Escape Scan
-      uses: Escape-Technologies/action@v1
+      uses: Escape-Technologies/action@v0
       with:
         ESCAPE_APPLICATION_ID: ${{ secrets.ESCAPE_APPLICATION_ID }}
         ESCAPE_API_KEY: ${{ secrets.ESCAPE_API_KEY }}

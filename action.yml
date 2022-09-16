@@ -1,6 +1,5 @@
---
 name: 'Escape.tech - Action'
-
+author: 'Escape-Technologies'
 description: 'Secure your application using Escape.tech'
 
 inputs:
@@ -21,7 +20,3 @@ runs:
     - ${{ inputs.application_id }}
     - ${{ inputs.api_key }}
     - ${{ inputs.timeout }}
-
-branding:
-  icon: 'check'  
-  color: 'white'
