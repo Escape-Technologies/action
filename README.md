@@ -4,6 +4,8 @@ Run [Escape](https://escape.tech) directly in Github actions !
 
 Using this action will allow you to start a security scan for a GraphQL application on the [Escape platform](https://app.escape.tech).
 
+We recommend providing these values as [Encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+
 
 ## Setup
 
