@@ -1,19 +1,28 @@
 # Escape.tech / Action
 
+Run [escape](https://escape.tech) directly in Github actions !
+
+Using this action will allow you to start a security scan for a GraphQL application on the [Escape platform](https://app.escape.tech).
+
+
 ## Setup
 
-You need two environment variable to setup continous scan integration:
-
-- `APPLICATION_ID`: Your Escape application ID
-- `API_KEY`: Your Escape API key
+This action requires an application ID and an API key to be provided. You can find both of these in the settings tab of your application on escape.
 
 You can find theses values in your Escape application settings.
 
+<img width="1106" alt="image" src="https://user-images.githubusercontent.com/29194680/190669534-792f5af5-3ac6-4c6e-9c67-46984bc41dd7.png">
+
+### Required arguments
+
+- `application_id`: The id of the application on Escape, that will be scanned continuously
+- `api_key`: Your API key on the Escape platform
+
 ### Optional
 
-- `TIMEOUT`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds.
+- `timeout`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds.
 
-## Usage
+## Usage example
 
 ```yaml
 on:
