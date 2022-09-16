@@ -3,10 +3,10 @@ author: 'Escape-Technologies'
 description: 'Secure your application using Escape.tech'
 
 inputs:
-  escape_application_id:
+  application_id:
     description: 'The id of your application'
     required: true
-  escape_api_key:
+  api_key:
     description: 'Your escape api key'
     required: true
   timeout:
@@ -17,8 +17,8 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    ESCAPE_APPLICATION_ID: ${{ inputs.escape_application_id }}
-    ESCAPE_API_KEY: ${{ inputs.escape_api_key }}
+    ESCAPE_APPLICATION_ID: ${{ inputs.application_id }}
+    ESCAPE_API_KEY: ${{ inputs.api_key }}
     TIMEOUT: ${{ inputs.timeout }}
 
 branding:
