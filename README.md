@@ -10,7 +10,7 @@ We recommend providing these values as [Encrypted secrets](https://docs.github.c
 
 ## Setup
 
-This action requires an application ID and an API key to be provided. You can find both of these in the settings tab of your application on escape.
+This action requires an application ID and an API key to be provided.
 
 You can find theses values in your Escape application settings.
 
