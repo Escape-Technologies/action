@@ -14,7 +14,7 @@ This action requires an application ID and an API key to be provided.
 
 You can find theses values in your Escape application settings.
 
-<img width="1290" alt="image" src="https://user-images.githubusercontent.com/29194680/190670679-9f0c4557-ec62-44df-8e63-2cdd29ddbb1b.png">
+<img width="1143" alt="image" src="https://user-images.githubusercontent.com/29194680/197798467-f09b46b0-9651-4d04-bf34-4d26ce268187.png">
 
 ### Required arguments
 
