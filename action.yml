@@ -1,26 +1,38 @@
-name: 'Escape - GraphQL Security'
-author: 'Escape-Technologies'
-description: 'Secure your application using Escape.tech'
+name: "Escape - GraphQL Security"
+author: "Escape-Technologies"
+description: "Secure your application using Escape.tech"
 
 inputs:
   application_id:
-    description: 'The id of your application'
+    description: "The id of your application"
     required: true
   api_key:
-    description: 'Your escape api key'
+    description: "Your escape api key"
     required: true
   timeout:
-    description: 'Maximum blocking time for a CI/CD run'
+    description: "Maximum blocking time for a CI/CD run"
+    required: false
+  configuration_override:
+    description: "Partial JSON configuration for the scan"
+    required: false
+  schema_file:
+    description: "Path to the schema file"
+    required: false
+  introspection_file:
+    description: "Path to the introspection response file"
     required: false
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   env:
     ESCAPE_APPLICATION_ID: ${{ inputs.application_id }}
     ESCAPE_API_KEY: ${{ inputs.api_key }}
     TIMEOUT: ${{ inputs.timeout }}
+    CONFIGURATION_OVERRIDE: ${{ inputs.configuration_override }}
+    SCHEMA_FILE: ${{ inputs.schema_file }}
+    INTROSPECTION_FILE: ${{ inputs.introspection_file }}
 
 branding:
-  icon: 'check'
-  color: 'white'
+  icon: "check"
+  color: "white"
