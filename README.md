@@ -24,6 +24,9 @@ You can find theses values in your Escape application settings.
 ### Optional
 
 - `timeout`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds.
+- `configuration_override`: A JSON override of the scan configuration. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
+- `introspection_file`: The relative path to a JSON file containing an introspection response for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
+- `shema_file`: The relative path to a GraphQL schema file for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
 
 ## Usage example
 
