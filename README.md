@@ -23,10 +23,15 @@ You can find theses values in your Escape application settings.
 
 ### Optional
 
-- `timeout`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds.
+- `timeout`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds. Set it to 0 to have a non blocking CI.
 - `configuration_override`: A JSON override of the scan configuration. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
-- `introspection_file`: The relative path to a JSON file containing an introspection response for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
-- `shema_file`: The relative path to a GraphQL schema file for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
+- `schema_file`: The relative path to a GraphQL schema, or json introspection response file for updating the application's schema on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
+- `introspection_file (legacy)`: The relative path to a JSON file containing an introspection response for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
+
+### Open Api (alpha)
+
+- `schema_file`: Relative path to an Open Api schema file. Supports Open Api v3 and swagger v2, yaml and json.
+- `schema_url`: Url to an Open Api schema file. Supports Open Api v3 and swagger v2, yaml and json.
 
 ## Usage example
 

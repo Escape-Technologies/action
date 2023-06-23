@@ -21,6 +21,9 @@ inputs:
   introspection_file:
     description: "Path to the introspection response file"
     required: false
+  schema_url:
+    description: "Url of hosted OpenApi schema file"
+    required: false
 
 runs:
   using: "docker"
