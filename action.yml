@@ -15,6 +15,9 @@ inputs:
   configuration_override:
     description: "Partial JSON configuration for the scan"
     required: false
+  configuration_override_path:
+    description: "Path to JSON file containing a partial configuration for the scan"
+    required: false
   schema_file:
     description: "Path to the schema file"
     required: false
@@ -30,6 +33,7 @@ runs:
     ESCAPE_API_KEY: ${{ inputs.api_key }}
     TIMEOUT: ${{ inputs.timeout }}
     CONFIGURATION_OVERRIDE: ${{ inputs.configuration_override }}
+    CONFIGURATION_OVERRIDE_PATH: ${{ inputs.configuration_override_path }}
     SCHEMA_FILE: ${{ inputs.schema_file }}
     INTROSPECTION_FILE: ${{ inputs.introspection_file }}
 
