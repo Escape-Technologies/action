@@ -25,8 +25,9 @@ You can find theses values in your Escape application settings.
 
 - `timeout`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds.
 - `configuration_override`: A JSON override of the scan configuration. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
+- `configuration_override_path`: Loads `configuration_override` from a file. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
 - `introspection_file`: The relative path to a JSON file containing an introspection response for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
-- `shema_file`: The relative path to a GraphQL schema file for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
+- `schema_file`: The relative path to a GraphQL schema file for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
 
 ## Usage example
 
@@ -44,5 +45,5 @@ jobs:
         with:
           application_id: ${{ secrets.ESCAPE_APPLICATION_ID }}
           api_key: ${{ secrets.ESCAPE_API_KEY }}
-          # timeout: 1200 (default - in seconds)
+          # timeout: 1200 (default - in seconds) (use 0 for non blocking pipelines)
 ```
