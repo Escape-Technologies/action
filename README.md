@@ -28,6 +28,7 @@ You can find theses values in your Escape application settings.
 - `configuration_override_path`: Loads `configuration_override` from a file. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
 - `introspection_file`: The relative path to a JSON file containing an introspection response for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
 - `schema_file`: The relative path to a GraphQL schema file for updating the application's introspection on Escape. [See the docs on introspection update](https://escape.tech/docs/ci-cd/techniques/introspection-update)
+- `fail_on_severities`: A csv-delimited list of severities to fail on, can be HIGH, MEDIUM, LOW, INFO. [See the docs from the cli](https://www.npmjs.com/package/@escape.tech/action)
 
 ## Usage example
 
