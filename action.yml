@@ -38,8 +38,10 @@ runs:
     CONFIGURATION_OVERRIDE: ${{ inputs.configuration_override }}
     CONFIGURATION_OVERRIDE_PATH: ${{ inputs.configuration_override_path }}
     SCHEMA_FILE: ${{ inputs.schema_file }}
+    SCHEMA_URL: ${{ inputs.schema_url }}
     INTROSPECTION_FILE: ${{ inputs.introspection_file }}
     FAIL_ON_SEVERITIES: ${{ inputs.fail_on_severities }}
+    FAIL_ON_COMPLIANCE: ${{ inputs.fail_on_compliance }}
 
 branding:
   icon: "check"
