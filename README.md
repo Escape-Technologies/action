@@ -23,6 +23,7 @@ You can find theses values in your Escape application settings.
 
 ### Optional
 
+- `r`: This option allows you to include remediations in the report. The report will be printed to the console, and will include the remediations for any security tests that failed.
 - `timeout`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds.
 - `configuration_override`: A JSON override of the scan configuration. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
 - `configuration_override_path`: Loads `configuration_override` from a file. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
