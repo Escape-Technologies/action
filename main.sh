@@ -9,13 +9,6 @@ if [ -z "${ESCAPE_API_KEY}" ]; then
     exit 1
 fi
 
-# Install escape-cli
-curl -sf https://raw.githubusercontent.com/Escape-Technologies/cli/refs/heads/main/scripts/install.sh | sh
-
-echo
-echo "Cli installed"
-echo
-
 # Update the schema if requested
 if [ ! -z "${ESCAPE_SCHEMA}" ]; then
     echo "Updating schema"
