@@ -12,7 +12,7 @@ fi
 # Update the schema if requested
 if [ ! -z "${ESCAPE_SCHEMA}" ]; then
     echo "Updating schema"
-    escape-cli update-schema "${ESCAPE_APPLICATION_ID}" "${ESCAPE_SCHEMA}"
+    /usr/local/bin/escape-cli update-schema "${ESCAPE_APPLICATION_ID}" "${ESCAPE_SCHEMA}"
 fi
 
 # Setup args
@@ -24,9 +24,6 @@ if [ ! -z "${ESCAPE_CONFIGURATION_OVERRIDE}" ]; then
     _ARGS="${_ARGS} --configuration-override ${ESCAPE_CONFIGURATION_OVERRIDE}"
 fi
 
-echo
 echo "Running scan:"
 echo "escape-cli ${_ARGS}"
-echo
-
-escape-cli ${_ARGS}
+/usr/local/bin/escape-cli ${_ARGS}
