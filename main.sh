@@ -16,7 +16,7 @@ if [ ! -z "${ESCAPE_SCHEMA}" ]; then
 fi
 
 # Setup args
-_ARGS="scan start \"${ESCAPE_APPLICATION_ID}\""
+_ARGS="scans start \"${ESCAPE_APPLICATION_ID}\""
 if [ "${ESCAPE_WATCH}" = "true" ]; then
     _ARGS="${_ARGS} --watch"
 fi
