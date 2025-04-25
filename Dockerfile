@@ -1,8 +1,7 @@
-FROM node:alpine
+FROM alpine/curl:8.12.1
 
 WORKDIR /app
+COPY main.sh .
+RUN chmod +x main.sh
 
-RUN npm install -g @escape.tech/action
-RUN npm show @escape.tech/action version
-
-ENTRYPOINT [ "escape-action" ]
+ENTRYPOINT ["./main.sh"]

@@ -1,48 +1,58 @@
+---
 name: "Escape - API Security"
 author: "Escape-Technologies"
 description: "Secure your application using Escape.tech"
 
 inputs:
   application_id:
-    description: "The id of your application"
+    description: "The id of the application to scan"
     required: true
   api_key:
     description: "Your escape api key"
     required: true
-  timeout:
-    description: "Maximum blocking time for a CI/CD run"
-    required: false
   configuration_override:
     description: "Partial JSON configuration for the scan"
     required: false
+  schema:
+    description: "The schema local path or publicly accessible URL. If provided, it will update the schema for the application"
+    required: false
+  watch:
+    description: "Wait until the scan ends and print the results"
+    required: false
+    default: "false"
+
+  # Deprecated
+
+  timeout:
+    description: "Maximum blocking time for a CI/CD run"
+    required: false
+    deprecationMessage: "Deprecated"
   configuration_override_path:
     description: "Path to JSON file containing a partial configuration for the scan"
     required: false
-  schema_file:
-    description: "Path to the schema file"
-    required: false
+    deprecationMessage: "Deprecated, use configuration_override instead"
   introspection_file:
     description: "Path to the introspection response file"
     required: false
+    deprecationMessage: "Deprecated, use schema instead"
+  schema_file:
+    description: "Path to the schema file"
+    required: false
+    deprecationMessage: "Deprecated, use schema instead"
   fail_on_severities:
     description: "A csv-delimited list of severities to fail on, can be HIGH, MEDIUM, LOW, INFO"
-    default: 'HIGH'
+    default: "HIGH"
     required: false
+    deprecationMessage: "Deprecated"
 runs:
   using: "docker"
   image: "Dockerfile"
   env:
     ESCAPE_APPLICATION_ID: ${{ inputs.application_id }}
     ESCAPE_API_KEY: ${{ inputs.api_key }}
-    TIMEOUT: ${{ inputs.timeout }}
-    CONFIGURATION_OVERRIDE: ${{ inputs.configuration_override }}
-    CONFIGURATION_OVERRIDE_PATH: ${{ inputs.configuration_override_path }}
-    SCHEMA_FILE: ${{ inputs.schema_file }}
-    SCHEMA_URL: ${{ inputs.schema_url }}
-    INTROSPECTION_FILE: ${{ inputs.introspection_file }}
-    FAIL_ON_SEVERITIES: ${{ inputs.fail_on_severities }}
-    FAIL_ON_COMPLIANCE: ${{ inputs.fail_on_compliance }}
-
+    ESCAPE_WATCH: ${{ inputs.watch }}
+    ESCAPE_CONFIGURATION_OVERRIDE: ${{ inputs.configuration_override }}
+    ESCAPE_SCHEMA: ${{ inputs.schema }}
 branding:
   icon: "check"
   color: "white"

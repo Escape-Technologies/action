@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [ -z "${ESCAPE_APPLICATION_ID}" ]; then
+    echo "ESCAPE_APPLICATION_ID is not set"
+    exit 1
+fi
+if [ -z "${ESCAPE_API_KEY}" ]; then
+    echo "ESCAPE_API_KEY is not set"
+    exit 1
+fi
+
+# Install escape-cli
+curl -sf https://raw.githubusercontent.com/Escape-Technologies/cli/refs/heads/main/scripts/install.sh | sh
+
+# Update the schema if requested
+if [ ! -z "${ESCAPE_SCHEMA}" ]; then
+    escape-cli update-schema "${ESCAPE_APPLICATION_ID}" "${ESCAPE_SCHEMA}"
+fi
+
+# Setup args
+_ARGS="scan start \"${ESCAPE_APPLICATION_ID}\""
+if [ "${ESCAPE_WATCH}" = "true" ]; then
+    _ARGS="${_ARGS} --watch"
+fi
+if [ ! -z "${ESCAPE_CONFIGURATION_OVERRIDE}" ]; then
+    _ARGS="${_ARGS} --configuration-override ${ESCAPE_CONFIGURATION_OVERRIDE}"
+fi
+
+escape-cli ${_ARGS}
