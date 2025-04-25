@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ -z "${ESCAPE_APPLICATION_ID}" ]; then
     echo "ESCAPE_APPLICATION_ID is not set"
