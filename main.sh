@@ -12,8 +12,13 @@ fi
 # Install escape-cli
 curl -sf https://raw.githubusercontent.com/Escape-Technologies/cli/refs/heads/main/scripts/install.sh | sh
 
+echo
+echo "Cli installed"
+echo
+
 # Update the schema if requested
 if [ ! -z "${ESCAPE_SCHEMA}" ]; then
+    echo "Updating schema"
     escape-cli update-schema "${ESCAPE_APPLICATION_ID}" "${ESCAPE_SCHEMA}"
 fi
 
@@ -25,5 +30,10 @@ fi
 if [ ! -z "${ESCAPE_CONFIGURATION_OVERRIDE}" ]; then
     _ARGS="${_ARGS} --configuration-override ${ESCAPE_CONFIGURATION_OVERRIDE}"
 fi
+
+echo
+echo "Running scan:"
+echo "escape-cli ${_ARGS}"
+echo
 
 escape-cli ${_ARGS}
