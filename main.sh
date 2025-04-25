@@ -26,4 +26,4 @@ fi
 
 echo "Running scan:"
 echo "escape-cli ${_ARGS}"
-/usr/local/bin/escape-cli ${_ARGS}
+/usr/local/bin/escape-cli -vvvv ${_ARGS}
