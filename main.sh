@@ -16,7 +16,7 @@ if [ ! -z "${ESCAPE_SCHEMA}" ]; then
 fi
 
 # Setup args
-_ARGS="scans start \"${ESCAPE_APPLICATION_ID}\""
+_ARGS="scans start ${ESCAPE_APPLICATION_ID}"
 if [ "${ESCAPE_WATCH}" = "true" ]; then
     _ARGS="${_ARGS} --watch"
 fi
@@ -26,4 +26,4 @@ fi
 
 echo "Running scan:"
 echo "escape-cli ${_ARGS}"
-/usr/local/bin/escape-cli -vvvv ${_ARGS}
+/usr/local/bin/escape-cli ${_ARGS}
