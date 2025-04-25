@@ -4,4 +4,4 @@ WORKDIR /app
 COPY main.sh .
 RUN chmod +x main.sh
 
-ENTRYPOINT ["./main.sh"]
+ENTRYPOINT ["/app/main.sh"]
