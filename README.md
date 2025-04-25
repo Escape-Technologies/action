@@ -14,8 +14,6 @@ This action requires an application ID and an API key to be provided.
 
 You can find theses values in your Escape application settings.
 
-<img width="1143" alt="image" src="https://user-images.githubusercontent.com/29194680/197798467-f09b46b0-9651-4d04-bf34-4d26ce268187.png">
-
 ### Required arguments
 
 - `application_id`: The id of the application on Escape, that will be scanned continuously
@@ -23,23 +21,21 @@ You can find theses values in your Escape application settings.
 
 ### Optional
 
-- `r`: This option allows you to include remediations in the report. The report will be printed to the console, and will include the remediations for any security tests that failed.
-- `timeout`: The maximum time in seconds to wait for the scan to complete. Default is 1200 seconds.
-- `configuration_override`: A JSON override of the scan configuration. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
-- `configuration_override_path`: Loads `configuration_override` from a file. [See the docs on configuration overrides](https://escape.tech/docs/ci-cd/techniques/configuration-override)
-- `introspection_file`: The relative path to a JSON file containing an introspection response for updating the application's introspection on Escape. [See the docs on introspection update](https://docs.escape.tech/ci-cd/introspection-update)
-- `schema_file`: The relative path to a GraphQL schema file for updating the application's introspection on Escape. [See the docs on introspection update](https://docs.escape.tech/ci-cd/introspection-update)
-- `schema_url`: The url to a GraphQL schema file for updating the application's introspection on Escape. [See the docs on introspection update](https://docs.escape.tech/ci-cd/introspection-update)
-- `fail_on_severities`: A csv-delimited list of severities to fail on, can be HIGH, MEDIUM, LOW, INFO. [See the docs from the cli](https://www.npmjs.com/package/@escape.tech/action)
-- `fail_on_compliance`: A JSON string to define exact controls in an array (or all of them with *), per compliance framework supported. [See the docs from the cli](https://www.npmjs.com/package/@escape.tech/action)
+- `watch`: Wait for scan completion
+- `configuration_override`: A JSON override of the scan configuration.
+- `schema`: The schema local path or publicly accessible URL. If provided, it will update the schema for the application.
 
 ## Usage example
 
 ```yaml
+---
+name: Escape
+
 on:
   push:
     branches:
       - main
+
 jobs:
   Escape:
     runs-on: ubuntu-latest
@@ -49,5 +45,5 @@ jobs:
         with:
           application_id: ${{ secrets.ESCAPE_APPLICATION_ID }}
           api_key: ${{ secrets.ESCAPE_API_KEY }}
-          # timeout: 1200 (default - in seconds) (use 0 for non blocking pipelines)
+          watch: "true" # to wait for scan completion
 ```
