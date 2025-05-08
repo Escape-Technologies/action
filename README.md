@@ -1,10 +1,10 @@
 # Escape.tech / Action
 
-Run [Escape](https://escape.tech) directly in Github actions !
+Run [Escape](https://escape.tech) directly in GitHub Actions!
 
 Using this action will allow you to start a security scan for a REST, GraphQL, or Frontend application on the [Escape platform](https://app.escape.tech).
 
-We recommend providing these values as [Encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
+We recommend providing these values as [encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
 <img width="925" alt="image" src="https://user-images.githubusercontent.com/29194680/190671671-282f35dd-5e03-4ebe-9202-46ad590cde5d.png">
 
@@ -12,20 +12,20 @@ We recommend providing these values as [Encrypted secrets](https://docs.github.c
 
 This action requires an application ID and an API key to be provided.
 
-You can find theses values in your Escape application settings.
+You can find these values in your Escape application settings.
 
-### Required arguments
+### Required Arguments
 
-- `application_id`: The id of the application on Escape, that will be scanned continuously
+- `application_id`: The ID of the application on Escape that will be scanned continuously
 - `api_key`: Your API key on the Escape platform
 
-### Optional
+### Optional Arguments
 
 - `watch`: Wait for scan completion
-- `configuration_override`: A JSON override of the scan configuration.
-- `schema`: The schema local path or publicly accessible URL. If provided, it will update the schema for the application.
+- `configuration_override`: A JSON override of the scan configuration
+- `schema`: The schema local path or publicly accessible URL. If provided, it will update the schema for the application
 
-## Usage example
+## Usage Example
 
 ```yaml
 ---

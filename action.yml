@@ -1,5 +1,5 @@
 ---
-name: "Escape - API Security"
+name: "Escape - DAST"
 author: "Escape-Technologies"
 description: "Secure your application using Escape.tech"
 
@@ -54,5 +54,5 @@ runs:
     ESCAPE_CONFIGURATION_OVERRIDE: ${{ inputs.configuration_override }}
     ESCAPE_SCHEMA: ${{ inputs.schema }}
 branding:
-  icon: "check"
+  icon: "shield"
   color: "white"
