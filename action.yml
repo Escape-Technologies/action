@@ -7,6 +7,10 @@ inputs:
   application_id:
     description: "The id of the application to scan"
     required: true
+    deprecationMessage: "Deprecated, use profile_id instead"
+  profile_id:
+    description: "The id of the profile to scan"
+    required: false
   api_key:
     description: "Your escape api key"
     required: true
@@ -48,7 +52,8 @@ runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    ESCAPE_APPLICATION_ID: ${{ inputs.application_id }}
+    ESCAPE_PROFILE_ID: ${{ inputs.profile_id }}
+    ESCAPE_APPLICATION_ID: ${{ inputs.application_id }} # deprecated, use profile_id instead
     ESCAPE_API_KEY: ${{ inputs.api_key }}
     ESCAPE_WATCH: ${{ inputs.watch }}
     ESCAPE_CONFIGURATION_OVERRIDE: ${{ inputs.configuration_override }}
